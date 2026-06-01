@@ -1,73 +1,73 @@
-equipo_local,equipo_visitante,estado,fase,fecha_hora,goles_local,goles_visitante,grupo,ganador_penales
-México,Sudáfrica,PENDIENTE,JORNADA_1,2026-06-11 13:00:00.000,,,GRUPO_A,
-Corea del Sur,Chequia,PENDIENTE,JORNADA_1,2026-06-11 20:00:00.000,,,GRUPO_A,
-Canadá,Bosnia y Herzegovina,PENDIENTE,JORNADA_1,2026-06-12 13:00:00.000,,,GRUPO_B,
-Estados Unidos,Paraguay,PENDIENTE,JORNADA_1,2026-06-12 19:00:00.000,,,GRUPO_D,
-Catar,Suiza,PENDIENTE,JORNADA_1,2026-06-13 13:00:00.000,,,GRUPO_B,
-Brasil,Marruecos,PENDIENTE,JORNADA_1,2026-06-13 16:00:00.000,,,GRUPO_C,
-Haití,Escocia,PENDIENTE,JORNADA_1,2026-06-13 19:00:00.000,,,GRUPO_C,
-Australia,Turquía,PENDIENTE,JORNADA_1,2026-06-13 22:00:00.000,,,GRUPO_D,
-Alemania,Curazao,PENDIENTE,JORNADA_1,2026-06-14 11:00:00.000,,,GRUPO_E,
-Países Bajos,Japón,PENDIENTE,JORNADA_1,2026-06-14 14:00:00.000,,,GRUPO_F,
-Costa de Marfil,Ecuador,PENDIENTE,JORNADA_1,2026-06-14 17:00:00.000,,,GRUPO_E,
-Suecia,Túnez,PENDIENTE,JORNADA_1,2026-06-14 20:00:00.000,,,GRUPO_F,
-España,Cabo Verde,PENDIENTE,JORNADA_1,2026-06-15 10:00:00.000,,,GRUPO_H,
-Arabia Saudita,Uruguay,PENDIENTE,JORNADA_1,2026-06-15 16:00:00.000,,,GRUPO_H,
-Bélgica,Egipto,PENDIENTE,JORNADA_1,2026-06-15 13:00:00.000,,,GRUPO_G,
-Irán,Nueva Zelanda,PENDIENTE,JORNADA_1,2026-06-15 19:00:00.000,,,GRUPO_G,
-Francia,Senegal,PENDIENTE,JORNADA_1,2026-06-16 13:00:00.000,,,GRUPO_I,
-Irak,Noruega,PENDIENTE,JORNADA_1,2026-06-16 16:00:00.000,,,GRUPO_I,
-Argentina,Argelia,PENDIENTE,JORNADA_1,2026-06-16 19:00:00.000,,,GRUPO_J,
-Austria,Jordania,PENDIENTE,JORNADA_1,2026-06-16 22:00:00.000,,,GRUPO_J,
-Portugal,RD del Congo,PENDIENTE,JORNADA_1,2026-06-17 11:00:00.000,,,GRUPO_K,
-Inglaterra,Croacia,PENDIENTE,JORNADA_1,2026-06-17 14:00:00.000,,,GRUPO_L,
-Ghana,Panamá,PENDIENTE,JORNADA_1,2026-06-17 17:00:00.000,,,GRUPO_L,
-Uzbekistán,Colombia,PENDIENTE,JORNADA_1,2026-06-17 20:00:00.000,,,GRUPO_K,
-Chequia,Sudáfrica,PENDIENTE,JORNADA_2,2026-06-18 10:00:00.000,,,GRUPO_A,
-Suiza,Bosnia y Herzegovina,PENDIENTE,JORNADA_2,2026-06-18 13:00:00.000,,,GRUPO_B,
-Canadá,Catar,PENDIENTE,JORNADA_2,2026-06-18 16:00:00.000,,,GRUPO_B,
-México,Corea del Sur,PENDIENTE,JORNADA_2,2026-06-18 19:00:00.000,,,GRUPO_A,
-Estados Unidos,Australia,PENDIENTE,JORNADA_2,2026-06-19 13:00:00.000,,,GRUPO_D,
-Brasil,Haití,PENDIENTE,JORNADA_2,2026-06-19 18:30:00.000,,,GRUPO_C,
-Escocia,Marruecos,PENDIENTE,JORNADA_2,2026-06-19 16:00:00.000,,,GRUPO_C,
-Turquía,Paraguay,PENDIENTE,JORNADA_2,2026-06-19 21:00:00.000,,,GRUPO_D,
-Alemania,Costa de Marfil,PENDIENTE,JORNADA_2,2026-06-20 14:00:00.000,,,GRUPO_E,
-Países Bajos,Suecia,PENDIENTE,JORNADA_2,2026-06-20 11:00:00.000,,,GRUPO_F,
-Ecuador,Curazao,PENDIENTE,JORNADA_2,2026-06-20 18:00:00.000,,,GRUPO_E,
-Túnez,Japón,PENDIENTE,JORNADA_2,2026-06-20 22:00:00.000,,,GRUPO_F,
-España,Arabia Saudita,PENDIENTE,JORNADA_2,2026-06-21 10:00:00.000,,,GRUPO_H,
-Uruguay,Cabo Verde,PENDIENTE,JORNADA_2,2026-06-21 16:00:00.000,,,GRUPO_H,
-Bélgica,Irán,PENDIENTE,JORNADA_2,2026-06-21 13:00:00.000,,,GRUPO_G,
-Nueva Zelanda,Egipto,PENDIENTE,JORNADA_2,2026-06-21 19:00:00.000,,,GRUPO_G,
-Francia,Irak,PENDIENTE,JORNADA_2,2026-06-22 15:00:00.000,,,GRUPO_I,
-Argentina,Austria,PENDIENTE,JORNADA_2,2026-06-22 11:00:00.000,,,GRUPO_J,
-Noruega,Senegal,PENDIENTE,JORNADA_2,2026-06-22 18:00:00.000,,,GRUPO_I,
-Jordania,Argelia,PENDIENTE,JORNADA_2,2026-06-22 21:00:00.000,,,GRUPO_J,
-Inglaterra,Ghana,PENDIENTE,JORNADA_2,2026-06-23 14:00:00.000,,,GRUPO_L,
-Portugal,Uzbekistán,PENDIENTE,JORNADA_2,2026-06-23 11:00:00.000,,,GRUPO_K,
-Panamá,Croacia,PENDIENTE,JORNADA_2,2026-06-23 17:00:00.000,,,GRUPO_L,
-Colombia,RD del Congo,PENDIENTE,JORNADA_2,2026-06-23 20:00:00.000,,,GRUPO_K,
-Suiza,Canadá,PENDIENTE,JORNADA_3,2026-06-24 13:00:00.000,,,GRUPO_B,
-Bosnia y Herzegovina,Catar,PENDIENTE,JORNADA_3,2026-06-24 13:00:00.000,,,GRUPO_B,
-Escocia,Brasil,PENDIENTE,JORNADA_3,2026-06-24 16:00:00.000,,,GRUPO_C,
-Marruecos,Haití,PENDIENTE,JORNADA_3,2026-06-24 16:00:00.000,,,GRUPO_C,
-Chequia,México,PENDIENTE,JORNADA_3,2026-06-24 19:00:00.000,,,GRUPO_A,
-Sudáfrica,Corea del Sur,PENDIENTE,JORNADA_3,2026-06-24 19:00:00.000,,,GRUPO_A,
-Curazao,Costa de Marfil,PENDIENTE,JORNADA_3,2026-06-25 14:00:00.000,,,GRUPO_E,
-Ecuador,Alemania,PENDIENTE,JORNADA_3,2026-06-25 14:00:00.000,,,GRUPO_E,
-Japón,Suecia,PENDIENTE,JORNADA_3,2026-06-25 17:00:00.000,,,GRUPO_F,
-Túnez,Países Bajos,PENDIENTE,JORNADA_3,2026-06-25 17:00:00.000,,,GRUPO_F,
-Turquía,Estados Unidos,PENDIENTE,JORNADA_3,2026-06-25 20:00:00.000,,,GRUPO_D,
-Paraguay,Australia,PENDIENTE,JORNADA_3,2026-06-25 20:00:00.000,,,GRUPO_D,
-Noruega,Francia,PENDIENTE,JORNADA_3,2026-06-26 13:00:00.000,,,GRUPO_I,
-Senegal,Irak,PENDIENTE,JORNADA_3,2026-06-26 13:00:00.000,,,GRUPO_I,
-Cabo Verde,Arabia Saudita,PENDIENTE,JORNADA_3,2026-06-26 18:00:00.000,,,GRUPO_H,
-Uruguay,España,PENDIENTE,JORNADA_3,2026-06-26 18:00:00.000,,,GRUPO_H,
-Egipto,Irán,PENDIENTE,JORNADA_3,2026-06-26 21:00:00.000,,,GRUPO_G,
-Nueva Zelanda,Bélgica,PENDIENTE,JORNADA_3,2026-06-26 21:00:00.000,,,GRUPO_G,
-Panamá,Inglaterra,PENDIENTE,JORNADA_3,2026-06-27 15:00:00.000,,,GRUPO_L,
-Croacia,Ghana,PENDIENTE,JORNADA_3,2026-06-27 15:00:00.000,,,GRUPO_L,
-Argelia,Austria,PENDIENTE,JORNADA_3,2026-06-27 20:00:00.000,,,GRUPO_J,
-Jordania,Argentina,PENDIENTE,JORNADA_3,2026-06-27 20:00:00.000,,,GRUPO_J,
-Colombia,Portugal,PENDIENTE,JORNADA_3,2026-06-27 17:30:00.000,,,GRUPO_K,
-RD del Congo,Uzbekistán,PENDIENTE,JORNADA_3,2026-06-27 17:30:00.000,,,GRUPO_K,
+equipo_local,equipo_visitante,estado,fase,fecha_hora,goles_local,goles_visitante,grupo,ganador_penales,bandera_local,bandera_visitante
+México,Sudáfrica,PENDIENTE,JORNADA_1,2026-06-11 13:00:00.000,,,GRUPO_A,,mexico.png,sudafrica.png
+Corea del Sur,Chequia,PENDIENTE,JORNADA_1,2026-06-11 20:00:00.000,,,GRUPO_A,,corea_sur.png,republica_checa.png
+Canadá,Bosnia y Herzegovina,PENDIENTE,JORNADA_1,2026-06-12 13:00:00.000,,,GRUPO_B,,canada.png,bosnia.png
+Estados Unidos,Paraguay,PENDIENTE,JORNADA_1,2026-06-12 19:00:00.000,,,GRUPO_D,,usa.png,paraguay.png
+Catar,Suiza,PENDIENTE,JORNADA_1,2026-06-13 13:00:00.000,,,GRUPO_B,,qatar.png,suiza.png
+Brasil,Marruecos,PENDIENTE,JORNADA_1,2026-06-13 16:00:00.000,,,GRUPO_C,,brasil.png,marruecos.png
+Haití,Escocia,PENDIENTE,JORNADA_1,2026-06-13 19:00:00.000,,,GRUPO_C,,haiti.png,escocia.png
+Australia,Turquía,PENDIENTE,JORNADA_1,2026-06-13 22:00:00.000,,,GRUPO_D,,australia.png,turquia.png
+Alemania,Curazao,PENDIENTE,JORNADA_1,2026-06-14 11:00:00.000,,,GRUPO_E,,alemania.png,curazao.png
+Países Bajos,Japón,PENDIENTE,JORNADA_1,2026-06-14 14:00:00.000,,,GRUPO_F,,holanda.png,japon.png
+Costa de Marfil,Ecuador,PENDIENTE,JORNADA_1,2026-06-14 17:00:00.000,,,GRUPO_E,,costa_marfil.png,ecuador.png
+Suecia,Túnez,PENDIENTE,JORNADA_1,2026-06-14 20:00:00.000,,,GRUPO_F,,suecia.png,tunez.png
+España,Cabo Verde,PENDIENTE,JORNADA_1,2026-06-15 10:00:00.000,,,GRUPO_H,,espana.png,cabo_verde.png
+Arabia Saudita,Uruguay,PENDIENTE,JORNADA_1,2026-06-15 16:00:00.000,,,GRUPO_H,,arabia_saudita.png,uruguay.png
+Bélgica,Egipto,PENDIENTE,JORNADA_1,2026-06-15 13:00:00.000,,,GRUPO_G,,belgica.png,egipto.png
+Irán,Nueva Zelanda,PENDIENTE,JORNADA_1,2026-06-15 19:00:00.000,,,GRUPO_G,,iran.png,nueva_zelanda.png
+Francia,Senegal,PENDIENTE,JORNADA_1,2026-06-16 13:00:00.000,,,GRUPO_I,,francia.png,senegal.png
+Irak,Noruega,PENDIENTE,JORNADA_1,2026-06-16 16:00:00.000,,,GRUPO_I,,irak.png,noruega.png
+Argentina,Argelia,PENDIENTE,JORNADA_1,2026-06-16 19:00:00.000,,,GRUPO_J,,argentina.png,argelia.png
+Austria,Jordania,PENDIENTE,JORNADA_1,2026-06-16 22:00:00.000,,,GRUPO_J,,austria.png,jordania.png
+Portugal,RD del Congo,PENDIENTE,JORNADA_1,2026-06-17 11:00:00.000,,,GRUPO_K,,portugal.png,rd_congo.png
+Inglaterra,Croacia,PENDIENTE,JORNADA_1,2026-06-17 14:00:00.000,,,GRUPO_L,,inglaterra.png,croacia.png
+Ghana,Panamá,PENDIENTE,JORNADA_1,2026-06-17 17:00:00.000,,,GRUPO_L,,ghana.png,panama.png
+Uzbekistán,Colombia,PENDIENTE,JORNADA_1,2026-06-17 20:00:00.000,,,GRUPO_K,,uzbekistan.png,colombia.png
+Chequia,Sudáfrica,PENDIENTE,JORNADA_2,2026-06-18 10:00:00.000,,,GRUPO_A,,republica_checa.png,sudafrica.png
+Suiza,Bosnia y Herzegovina,PENDIENTE,JORNADA_2,2026-06-18 13:00:00.000,,,GRUPO_B,,suiza.png,bosnia.png
+Canadá,Catar,PENDIENTE,JORNADA_2,2026-06-18 16:00:00.000,,,GRUPO_B,,canada.png,qatar.png
+México,Corea del Sur,PENDIENTE,JORNADA_2,2026-06-18 19:00:00.000,,,GRUPO_A,,mexico.png,corea_sur.png
+Estados Unidos,Australia,PENDIENTE,JORNADA_2,2026-06-19 13:00:00.000,,,GRUPO_D,,usa.png,australia.png
+Brasil,Haití,PENDIENTE,JORNADA_2,2026-06-19 18:30:00.000,,,GRUPO_C,,brasil.png,haiti.png
+Escocia,Marruecos,PENDIENTE,JORNADA_2,2026-06-19 16:00:00.000,,,GRUPO_C,,escocia.png,marruecos.png
+Turquía,Paraguay,PENDIENTE,JORNADA_2,2026-06-19 21:00:00.000,,,GRUPO_D,,turquia.png,paraguay.png
+Alemania,Costa de Marfil,PENDIENTE,JORNADA_2,2026-06-20 14:00:00.000,,,GRUPO_E,,alemania.png,costa_marfil.png
+Países Bajos,Suecia,PENDIENTE,JORNADA_2,2026-06-20 11:00:00.000,,,GRUPO_F,,holanda.png,suecia.png
+Ecuador,Curazao,PENDIENTE,JORNADA_2,2026-06-20 18:00:00.000,,,GRUPO_E,,ecuador.png,curazao.png
+Túnez,Japón,PENDIENTE,JORNADA_2,2026-06-20 22:00:00.000,,,GRUPO_F,,tunez.png,japon.png
+España,Arabia Saudita,PENDIENTE,JORNADA_2,2026-06-21 10:00:00.000,,,GRUPO_H,,espana.png,arabia_saudita.png
+Uruguay,Cabo Verde,PENDIENTE,JORNADA_2,2026-06-21 16:00:00.000,,,GRUPO_H,,uruguay.png,cabo_verde.png
+Bélgica,Irán,PENDIENTE,JORNADA_2,2026-06-21 13:00:00.000,,,GRUPO_G,,belgica.png,iran.png
+Nueva Zelanda,Egipto,PENDIENTE,JORNADA_2,2026-06-21 19:00:00.000,,,GRUPO_G,,nueva_zelanda.png,egipto.png
+Francia,Irak,PENDIENTE,JORNADA_2,2026-06-22 15:00:00.000,,,GRUPO_I,,francia.png,irak.png
+Argentina,Austria,PENDIENTE,JORNADA_2,2026-06-22 11:00:00.000,,,GRUPO_J,,argentina.png,austria.png
+Noruega,Senegal,PENDIENTE,JORNADA_2,2026-06-22 18:00:00.000,,,GRUPO_I,,noruega.png,senegal.png
+Jordania,Argelia,PENDIENTE,JORNADA_2,2026-06-22 21:00:00.000,,,GRUPO_J,,jordania.png,argelia.png
+Inglaterra,Ghana,PENDIENTE,JORNADA_2,2026-06-23 14:00:00.000,,,GRUPO_L,,inglaterra.png,ghana.png
+Portugal,Uzbekistán,PENDIENTE,JORNADA_2,2026-06-23 11:00:00.000,,,GRUPO_K,,portugal.png,uzbekistan.png
+Panamá,Croacia,PENDIENTE,JORNADA_2,2026-06-23 17:00:00.000,,,GRUPO_L,,panama.png,croacia.png
+Colombia,RD del Congo,PENDIENTE,JORNADA_2,2026-06-23 20:00:00.000,,,GRUPO_K,,colombia.png,rd_congo.png
+Suiza,Canadá,PENDIENTE,JORNADA_3,2026-06-24 13:00:00.000,,,GRUPO_B,,suiza.png,canada.png
+Bosnia y Herzegovina,Catar,PENDIENTE,JORNADA_3,2026-06-24 13:00:00.000,,,GRUPO_B,,bosnia.png,qatar.png
+Escocia,Brasil,PENDIENTE,JORNADA_3,2026-06-24 16:00:00.000,,,GRUPO_C,,escocia.png,brasil.png
+Marruecos,Haití,PENDIENTE,JORNADA_3,2026-06-24 16:00:00.000,,,GRUPO_C,,marruecos.png,haiti.png
+Chequia,México,PENDIENTE,JORNADA_3,2026-06-24 19:00:00.000,,,GRUPO_A,,republica_checa.png,mexico.png
+Sudáfrica,Corea del Sur,PENDIENTE,JORNADA_3,2026-06-24 19:00:00.000,,,GRUPO_A,,sudafrica.png,corea_sur.png
+Curazao,Costa de Marfil,PENDIENTE,JORNADA_3,2026-06-25 14:00:00.000,,,GRUPO_E,,curazao.png,costa_marfil.png
+Ecuador,Alemania,PENDIENTE,JORNADA_3,2026-06-25 14:00:00.000,,,GRUPO_E,,ecuador.png,alemania.png
+Japón,Suecia,PENDIENTE,JORNADA_3,2026-06-25 17:00:00.000,,,GRUPO_F,,japon.png,suecia.png
+Túnez,Países Bajos,PENDIENTE,JORNADA_3,2026-06-25 17:00:00.000,,,GRUPO_F,,tunez.png,holanda.png
+Turquía,Estados Unidos,PENDIENTE,JORNADA_3,2026-06-25 20:00:00.000,,,GRUPO_D,,turquia.png,usa.png
+Paraguay,Australia,PENDIENTE,JORNADA_3,2026-06-25 20:00:00.000,,,GRUPO_D,,paraguay.png,australia.png
+Noruega,Francia,PENDIENTE,JORNADA_3,2026-06-26 13:00:00.000,,,GRUPO_I,,noruega.png,francia.png
+Senegal,Irak,PENDIENTE,JORNADA_3,2026-06-26 13:00:00.000,,,GRUPO_I,,senegal.png,irak.png
+Cabo Verde,Arabia Saudita,PENDIENTE,JORNADA_3,2026-06-26 18:00:00.000,,,GRUPO_H,,cabo_verde.png,arabia_saudita.png
+Uruguay,España,PENDIENTE,JORNADA_3,2026-06-26 18:00:00.000,,,GRUPO_H,,uruguay.png,espana.png
+Egipto,Irán,PENDIENTE,JORNADA_3,2026-06-26 21:00:00.000,,,GRUPO_G,,egipto.png,iran.png
+Nueva Zelanda,Bélgica,PENDIENTE,JORNADA_3,2026-06-26 21:00:00.000,,,GRUPO_G,,nueva_zelanda.png,belgica.png
+Panamá,Inglaterra,PENDIENTE,JORNADA_3,2026-06-27 15:00:00.000,,,GRUPO_L,,panama.png,inglaterra.png
+Croacia,Ghana,PENDIENTE,JORNADA_3,2026-06-27 15:00:00.000,,,GRUPO_L,,croacia.png,ghana.png
+Argelia,Austria,PENDIENTE,JORNADA_3,2026-06-27 20:00:00.000,,,GRUPO_J,,argelia.png,austria.png
+Jordania,Argentina,PENDIENTE,JORNADA_3,2026-06-27 20:00:00.000,,,GRUPO_J,,jordania.png,argentina.png
+Colombia,Portugal,PENDIENTE,JORNADA_3,2026-06-27 17:30:00.000,,,GRUPO_K,,colombia.png,portugal.png
+RD del Congo,Uzbekistán,PENDIENTE,JORNADA_3,2026-06-27 17:30:00.000,,,GRUPO_K,,rd_congo.png,uzbekistan.png

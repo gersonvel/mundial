@@ -39,4 +39,10 @@ public class Partido {
 
     @Column(name = "ganador_penales")
     private String ganadorPenales;
+
+    @Column(name = "bandera_local")
+    private String banderaLocal;
+
+    @Column(name = "bandera_visitante")
+    private String banderaVisitante;
 }
