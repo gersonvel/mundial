@@ -1,61 +1,67 @@
 package com.quiniela.mundial.security;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
+import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 
-import java.nio.charset.StandardCharsets;
-import java.security.Key;
+import javax.crypto.SecretKey;
 import java.util.Date;
-import java.util.function.Function;
+import java.util.stream.Collectors;
 
+@Slf4j
 @Component
 public class JwtUtils {
 
-    // Inyección desde application.properties
     @Value("${quiniela.jwt.secret}")
-    private String secretString;
+    private String secretKey;
 
     @Value("${quiniela.jwt.expiration}")
-    private long jwtExpiration;
+    private String timeExpiration;
 
-    // Genera la llave criptográfica a partir del String inyectado
-    private Key getSigningKey() {
-        byte[] keyBytes = this.secretString.getBytes(StandardCharsets.UTF_8);
-        return Keys.hmacShaKeyFor(keyBytes);
-    }
+    public String generateToken(Authentication auth) {
+        String username = auth.getName();
+        String authorities = auth.getAuthorities().stream()
+                .map(GrantedAuthority::getAuthority)
+                .collect(Collectors.joining(","));
 
-    public String generarToken(String username) {
         return Jwts.builder()
-                .setSubject(username)
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + jwtExpiration)) // Usa el valor inyectado
-                .signWith(getSigningKey(), SignatureAlgorithm.HS256) // Firma con la llave generada
+                .subject(username)
+                .claim("authorities", authorities)
+                .issuedAt(new Date(System.currentTimeMillis()))
+                .expiration(new Date(System.currentTimeMillis() + Long.parseLong(timeExpiration)))
+                .signWith(getSignatureKey())
                 .compact();
     }
 
-    public String extraerUsername(String token) {
-        return extraerClaim(token, Claims::getSubject);
+    public boolean validateToken(String token) {
+        try {
+            Jwts.parser()
+                    .verifyWith(getSignatureKey())
+                    .build()
+                    .parseSignedClaims(token);
+            return true;
+        } catch (JwtException | IllegalArgumentException e) {
+            log.error("Error de validación del Token: {}", e.getMessage());
+            return false;
+        }
     }
 
-    public boolean validarToken(String token, String username) {
-        final String tokenUsername = extraerUsername(token);
-        return (tokenUsername.equals(username) && !isTokenExpirado(token));
-    }
-
-    private boolean isTokenExpirado(String token) {
-        return extraerClaim(token, Claims::getExpiration).before(new Date());
-    }
-
-    public <T> T extraerClaim(String token, Function<Claims, T> claimsResolver) {
-        final Claims claims = Jwts.parserBuilder()
-                .setSigningKey(getSigningKey()) // Usa la llave generada para descifrar
+    public String getUsernameFromToken(String token) {
+        return Jwts.parser()
+                .verifyWith(getSignatureKey())
                 .build()
-                .parseClaimsJws(token)
-                .getBody();
-        return claimsResolver.apply(claims);
+                .parseSignedClaims(token)
+                .getPayload()
+                .getSubject();
+    }
+
+    private SecretKey getSignatureKey() {
+        byte[] keyBytes = Decoders.BASE64.decode(secretKey);
+        return Keys.hmacShaKeyFor(keyBytes);
     }
 }
