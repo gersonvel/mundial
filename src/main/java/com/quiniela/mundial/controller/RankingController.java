@@ -1,5 +1,6 @@
 package com.quiniela.mundial.controller;
 
+import com.quiniela.mundial.dto.RankingDesempateDTO;
 import com.quiniela.mundial.dto.ResponseDTO;
 import com.quiniela.mundial.model.Usuario;
 import com.quiniela.mundial.service.RankingService;
@@ -37,6 +38,25 @@ public class RankingController {
                     HttpStatus.INTERNAL_SERVER_ERROR.value(),
                     true,
                     "Error al obtener el ranking: " + e.getMessage(),
+                    null));
+        }
+    }
+
+    @GetMapping("/desempate")
+    public ResponseEntity<ResponseDTO> getRankingConDesempate() {
+        try {
+            List<RankingDesempateDTO> rankingResult = rankingService.obtenerRankingConCriterios();
+
+            return ResponseEntity.ok(new ResponseDTO(
+                    HttpStatus.OK.value(),
+                    false,
+                    "Ranking con criterios de desempate calculado con éxito",
+                    rankingResult));
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ResponseDTO(
+                    HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                    true,
+                    "Error al calcular desempates: " + e.getMessage(),
                     null));
         }
     }
