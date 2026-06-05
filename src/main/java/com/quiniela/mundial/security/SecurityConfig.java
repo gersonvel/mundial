@@ -39,7 +39,6 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        // 🌟 1. PERMITIR TODAS LAS PETICIONES OPTIONS (CORS Preflight)
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
 
                         .requestMatchers("/api/auth/**").permitAll()

@@ -19,8 +19,7 @@ public class Usuario {
     private String username;
 
     @Column(nullable = false)
-    @JsonIgnore // Evita que la contraseña se envíe en los JSON de respuesta (como en el
-                // Ranking)
+    @JsonIgnore // Evita que la contraseña se envíe en los JSON de respuesta
     private String password;
 
     @Column(name = "puntos_totales", nullable = false)

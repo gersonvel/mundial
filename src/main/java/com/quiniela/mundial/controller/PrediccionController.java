@@ -28,14 +28,11 @@ public class PrediccionController {
     @PostMapping
     public ResponseEntity<ResponseDTO> registrarPrediccion(@RequestBody PrediccionRequestDTO request) {
         try {
-            // MAGIA: Obtenemos el username directamente de la sesión protegida por JWT
             String usernameContext = SecurityContextHolder.getContext().getAuthentication().getName();
 
-            // Buscamos el ID real del usuario a partir del username del token
             Usuario usuario = usuarioRepository.findByUsername(usernameContext)
                     .orElseThrow(() -> new RuntimeException("Usuario no válido en la sesión"));
 
-            // Mandamos el ID real al servicio sin depender de headers tramposos
             Prediccion guardada = prediccionService.guardarPrediccion(usuario.getId(), request);
 
             return ResponseEntity.ok(new ResponseDTO(
@@ -61,7 +58,6 @@ public class PrediccionController {
             Usuario usuario = usuarioRepository.findByUsername(usernameContext)
                     .orElseThrow(() -> new RuntimeException("Usuario no válido en la sesión"));
 
-            // Cambia 'obtenerPorUsuarioId' por el nombre exacto de tu método en el Service
             List<Prediccion> misPredicciones = prediccionService.obtenerPrediccionesPorUsuario(usuario.getId());
 
             return ResponseEntity.ok(new ResponseDTO(

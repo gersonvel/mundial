@@ -106,7 +106,7 @@ public class AuthServiceImpl implements AuthService {
                 // 4. CREAR Y GUARDAR LA RELACIÓN EN LA TABLA INTERMEDIA (CORREGIDO)
                 UsuarioRol usuarioRol = new UsuarioRol(usuarioGuardado, rolUser);
 
-                // 🌟 PASO CLAVE: Guardamos explícitamente en la tabla intermedia
+                // PASO CLAVE: Guardamos explícitamente en la tabla intermedia
                 // 'usuarios_roles'
                 usuarioRolRepository.save(usuarioRol);
 

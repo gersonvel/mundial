@@ -22,7 +22,6 @@ public class PartidoController {
     @GetMapping
     public ResponseEntity<ResponseDTO> obtenerTodosLosPartidos() {
         try {
-            // Ahora sí, mandamos a llamar al método que acabamos de crear
             List<Partido> todos = partidoService.obtenerTodos();
             return ResponseEntity.ok(new ResponseDTO(
                     HttpStatus.OK.value(),
@@ -38,7 +37,7 @@ public class PartidoController {
         }
     }
 
-    // Endpoint para que los Usuarios vean los partidos activos en React
+    // Endpoint para que los Usuarios vean los partidos activos
     @GetMapping("/activos")
     public ResponseEntity<ResponseDTO> obtenerActivos() {
         try {
@@ -61,15 +60,13 @@ public class PartidoController {
     @PutMapping("/{id}/resultado")
     public ResponseEntity<ResponseDTO> finalizarPartido(
             @PathVariable Long id,
-            @RequestBody ResultadoPartidoRequestDTO request) { // 🌟 Tu DTO ahora debe incluir 'ganadorPenales'
+            @RequestBody ResultadoPartidoRequestDTO request) {
         try {
-            // 🌟 AGREGAMOS EL CUARTO PARÁMETRO AQUÍ:
             Partido partidoProcesado = partidoService.registrarResultado(
                     id,
                     request.getGolesLocal(),
                     request.getGolesVisitante(),
-                    request.getGanadorPenales() // 👈 Mandamos la decisión de penales al servicio
-            );
+                    request.getGanadorPenales());
 
             return ResponseEntity.ok(new ResponseDTO(
                     HttpStatus.OK.value(),
@@ -90,7 +87,6 @@ public class PartidoController {
         try {
             Partido partidoGuardado = partidoService.guardarPartido(nuevoPartido);
 
-            // Usamos tu estructura ResponseDTO manual
             return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseDTO(
                     HttpStatus.CREATED.value(),
                     false,
@@ -108,7 +104,7 @@ public class PartidoController {
     @DeleteMapping("/{id}")
     public ResponseEntity<ResponseDTO> eliminarPartido(@PathVariable Long id) {
         try {
-            partidoService.eliminarPorId(id); // Crea este método en tu service: partidoRepository.deleteById(id);
+            partidoService.eliminarPorId(id);
             return ResponseEntity.ok(new ResponseDTO(
                     HttpStatus.OK.value(),
                     false,

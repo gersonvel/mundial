@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/ranking")
-@CrossOrigin(origins = "*") // Permite que React consuma el endpoint sin errores de CORS
+@CrossOrigin(origins = "*")
 public class RankingController {
 
     @Autowired
@@ -27,7 +27,6 @@ public class RankingController {
         try {
             List<Usuario> ranking = rankingService.obtenerRanking();
 
-            // Retornamos tu estructura ResponseDTO de forma manual
             return ResponseEntity.ok(new ResponseDTO(
                     HttpStatus.OK.value(),
                     false,

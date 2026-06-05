@@ -39,7 +39,7 @@ public class PartidoServiceImpl implements PartidoService {
     }
 
     @Override
-    @Transactional // Asegura que si algo falla, no se guarden puntos a medias
+    @Transactional
     public Partido registrarResultado(Long partidoId, int golesLocal, int golesVisitante, String ganadorPenales) {
         // 1. Buscar el partido
         Partido partido = partidoRepository.findById(partidoId)
@@ -86,8 +86,6 @@ public class PartidoServiceImpl implements PartidoService {
     private int calcularPuntos(int gLocalReal, int gVisitReal, int gLocalPred, int gVisitPred, String fase,
             String ganadorPenalesReal) {
 
-        // 🌟 LOGS DE AUDITORÍA: Verás en la consola de Spring Boot qué datos entran
-        // exactamente
         System.out.println("\n [QUINIELA] === CALCULANDO PUNTOS ===");
         System.out.println("Fase del partido: " + fase);
         System.out.println("Marcador REAL:    " + gLocalReal + " - " + gVisitReal);
@@ -111,7 +109,6 @@ public class PartidoServiceImpl implements PartidoService {
 
         boolean atinoGanador = false;
 
-        // Mantenemos tu regla favorita con startsWith para Fase de Grupos
         if (fase != null && fase.startsWith("JORNADA")) {
             atinoGanador = (ganaLocalReal && ganaLocalPred) ||
                     (ganaVisitanteReal && ganaVisitantePred) ||
