@@ -7,6 +7,9 @@ import com.quiniela.mundial.repository.PartidoRepository;
 import com.quiniela.mundial.repository.PrediccionRepository;
 import com.quiniela.mundial.repository.UsuarioRepository;
 import com.quiniela.mundial.service.PartidoService;
+
+import lombok.RequiredArgsConstructor;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,6 +18,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
+// @RequiredArgsConstructor
 public class PartidoServiceImpl implements PartidoService {
 
     @Autowired
@@ -23,6 +27,10 @@ public class PartidoServiceImpl implements PartidoService {
     private PrediccionRepository prediccionRepository;
     @Autowired
     private UsuarioRepository usuarioRepository;
+
+    // private final PartidoRepository partidoRepository;
+    // private final PrediccionRepository prediccionRepository;
+    // private final UsuarioRepository usuarioRepository;
 
     @Override
     public List<Partido> obtenerPartidosActivos() {
