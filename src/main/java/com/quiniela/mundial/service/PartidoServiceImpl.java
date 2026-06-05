@@ -103,12 +103,13 @@ public class PartidoServiceImpl implements PartidoService {
 
         boolean atinoGanador = false;
 
-        // 🌟 Mantenemos tu regla favorita con startsWith para Fase de Grupos
+        // Mantenemos tu regla favorita con startsWith para Fase de Grupos
         if (fase != null && fase.startsWith("JORNADA")) {
             atinoGanador = (ganaLocalReal && ganaLocalPred) ||
                     (ganaVisitanteReal && ganaVisitantePred) ||
                     (empateReal && empatePred);
         }
+
         // Eliminación directa (Octavos, Cuartos, etc.)
         else {
             if (empateReal) {
@@ -133,24 +134,24 @@ public class PartidoServiceImpl implements PartidoService {
 
         // REGLA 2: Atinó al ganador Y a los goles de UN equipo -> 4 puntos
         if (atinoGanador && atinoAlMenosUnEquipo) {
-            System.out.println("🎉 RESULTADO: 4 PUNTOS (Atinó Ganador + Goles de un equipo)");
+            System.out.println("RESULTADO: 4 PUNTOS (Atinó Ganador + Goles de un equipo)");
             return 4;
         }
 
         // REGLA 3: Atinó únicamente al ganador (sin pegarle a los goles de nadie) -> 3
         // puntos
         if (atinoGanador) {
-            System.out.println("👍 RESULTADO: 3 PUNTOS (Atinó únicamente al Ganador)");
+            System.out.println("RESULTADO: 3 PUNTOS (Atinó únicamente al Ganador)");
             return 3;
         }
 
         // REGLA 4: No atinó al ganador, pero sí a los goles de un equipo -> 1 punto
         if (atinoAlMenosUnEquipo) {
-            System.out.println("🎗️ RESULTADO: 1 PUNTO (Consolación: Goles de un equipo)");
+            System.out.println("RESULTADO: 1 PUNTO (Consolación: Goles de un equipo)");
             return 1;
         }
 
-        System.out.println("❌ RESULTADO: 0 PUNTOS");
+        System.out.println("RESULTADO: 0 PUNTOS");
         return 0;
     }
 

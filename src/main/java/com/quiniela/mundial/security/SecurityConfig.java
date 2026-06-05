@@ -56,13 +56,10 @@ public class SecurityConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173", "http://10.240.236.167:5173"));
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173", "http://10.240.236.167:5173",
+                "https://b09z310j-5173.usw3.devtunnels.ms", "http://172.21.0.1:5173"));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
-
-        // CAMBIA ESTA LÍNEA (Pon un asterisco para permitir todos los Headers
-        // estándar):
         configuration.setAllowedHeaders(Arrays.asList("*"));
-
         configuration.setExposedHeaders(Arrays.asList("Content-Disposition"));
         configuration.setAllowCredentials(true);
         configuration.setMaxAge(3600L);
