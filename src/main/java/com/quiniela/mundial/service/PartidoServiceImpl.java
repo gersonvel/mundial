@@ -139,21 +139,28 @@ public class PartidoServiceImpl implements PartidoService {
 
         // REGLA 2: Atinó al ganador Y a los goles de UN equipo -> 4 puntos
         if (atinoGanador && atinoAlMenosUnEquipo) {
-            System.out.println("RESULTADO: 4 PUNTOS (Atinó Ganador + Goles de un equipo)");
-            return 4;
+            // System.out.println("RESULTADO: 4 PUNTOS (Atinó Ganador + Goles de un
+            // equipo)");
+            System.out.println("RESULTADO: 3 PUNTOS (Atinó Ganador + Goles de un equipo)");
+            // return 4;
+            return 3;
         }
 
         // REGLA 3: Atinó únicamente al ganador (sin pegarle a los goles de nadie) -> 3
         // puntos
         if (atinoGanador) {
-            System.out.println("RESULTADO: 3 PUNTOS (Atinó únicamente al Ganador)");
-            return 3;
+            // System.out.println("RESULTADO: 3 PUNTOS (Atinó únicamente al Ganador)");
+            System.out.println("RESULTADO: 1 PUNTOS (Atinó únicamente al Ganador o empate)");
+            // return 3;
+            return 1;
         }
 
         // REGLA 4: No atinó al ganador, pero sí a los goles de un equipo -> 1 punto
         if (atinoAlMenosUnEquipo) {
-            System.out.println("RESULTADO: 1 PUNTO (Consolación: Goles de un equipo)");
-            return 1;
+            // System.out.println("RESULTADO: 1 PUNTO (Consolación: Goles de un equipo)");
+            System.out.println("RESULTADO: 2 PUNTO (Consolación: Goles de un equipo)");
+            // return 1;
+            return 2;
         }
 
         System.out.println("RESULTADO: 0 PUNTOS");

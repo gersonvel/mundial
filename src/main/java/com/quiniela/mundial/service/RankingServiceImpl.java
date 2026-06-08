@@ -35,6 +35,7 @@ public class RankingServiceImpl implements RankingService {
                 .thenComparing(Comparator.comparingLong(RankingDesempateDTO::getCincos).reversed())
                 .thenComparing(Comparator.comparingLong(RankingDesempateDTO::getCuatros).reversed())
                 .thenComparing(Comparator.comparingLong(RankingDesempateDTO::getTres).reversed())
+                .thenComparing(Comparator.comparingLong(RankingDesempateDTO::getDos).reversed())
                 .thenComparing(Comparator.comparingLong(RankingDesempateDTO::getUnos).reversed());
 
         return datosRaw.stream()

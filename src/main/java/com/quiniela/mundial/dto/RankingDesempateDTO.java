@@ -12,14 +12,18 @@ public class RankingDesempateDTO {
     private Long cincos;
     private Long cuatros;
     private Long tres;
+    private Long dos;
     private Long unos;
 
-    public RankingDesempateDTO(String username, Long puntosTotales, Long cincos, Long cuatros, Long tres, Long unos) {
+    public RankingDesempateDTO(String username, Long puntosTotales, Long cincos, Long cuatros, Long tres, Long dos,
+            Long unos) {
         this.username = username;
         this.puntosTotales = puntosTotales != null ? puntosTotales : 0L;
         this.cincos = cincos != null ? cincos : 0L;
         this.cuatros = cuatros != null ? cuatros : 0L;
         this.tres = tres != null ? tres : 0L;
+        this.dos = dos != null ? dos : 0L;
         this.unos = unos != null ? unos : 0L;
+
     }
 }

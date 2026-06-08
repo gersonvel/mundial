@@ -23,6 +23,7 @@ public interface PrediccionRepository extends JpaRepository<Prediccion, Long> {
             "COUNT(CASE WHEN p.puntosGanados = 5 THEN 1 END), " +
             "COUNT(CASE WHEN p.puntosGanados = 4 THEN 1 END), " +
             "COUNT(CASE WHEN p.puntosGanados = 3 THEN 1 END), " +
+            "COUNT(CASE WHEN p.puntosGanados = 2 THEN 1 END), " +
             "COUNT(CASE WHEN p.puntosGanados = 1 THEN 1 END)) " +
             "FROM Prediccion p " +
             "GROUP BY p.usuario.username")
