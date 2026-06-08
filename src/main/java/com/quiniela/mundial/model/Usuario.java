@@ -25,6 +25,9 @@ public class Usuario {
     @Column(name = "puntos_totales", nullable = false)
     private int puntosTotales = 0;
 
+    @Column(name = "activo", nullable = false)
+    private boolean activo = false;
+
     // Relación uno a muchos hacia la tabla intermedia
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<UsuarioRol> usuarioRoles = new ArrayList<>();

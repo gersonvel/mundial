@@ -48,6 +48,9 @@ public class AuthServiceImpl implements AuthService {
         @Autowired
         private UsuarioRolRepository usuarioRolRepository;
 
+        @Autowired
+        private UsuarioRepository usuarioRepository;
+
         @Override
         public AuthResponseDTO login(AuthRequestDTO authRequest) {
                 Authentication authentication = authenticationManager.authenticate(
@@ -71,6 +74,7 @@ public class AuthServiceImpl implements AuthService {
                                 "Login exitoso",
                                 token,
                                 true,
+                                userEntity.isActivo(),
                                 roles);
         }
 
@@ -94,6 +98,7 @@ public class AuthServiceImpl implements AuthService {
                 nuevoUsuario.setUsername(username);
                 nuevoUsuario.setPassword(passwordEncoder.encode(password));
                 nuevoUsuario.setPuntosTotales(0);
+                nuevoUsuario.setActivo(false);
 
                 // Guardamos el usuario base
                 Usuario usuarioGuardado = userRepository.save(nuevoUsuario);
@@ -119,5 +124,35 @@ public class AuthServiceImpl implements AuthService {
                                 false,
                                 "Usuario registrado exitosamente",
                                 null);
+        }
+
+        @Override
+        public AuthResponseDTO obtenerUsuarioPorToken(String token) {
+                // 1. Usamos el método exacto de tu clase JwtUtils
+                String username = jwtUtils.getUsernameFromToken(token);
+
+                // 2. Buscar al usuario actualizado en la base de datos
+                Usuario usuario = usuarioRepository.findByUsername(username)
+                                .orElseThrow(() -> new RuntimeException(
+                                                "Usuario no encontrado con el username: " + username));
+
+                // 3. 🔥 CORREGIDO: Declaramos explícitamente el tipo de dato (UsuarioRol ur)
+                // para resolver el error de inferencia de tipo del compilador (Java 16778275)
+                Set<String> roles = usuario.getUsuarioRoles().stream()
+                                .filter(ur -> ur.getRol() != null) // Filtro de seguridad
+                                .map((UsuarioRol ur) -> ur.getRol().getNombre())
+                                .collect(Collectors.toSet());
+
+                // 4. Retornar el AuthResponseDTO con el estado 'activo' real de la Base de
+                // Datos
+                return new AuthResponseDTO(
+                                usuario.getUsername(),
+                                "",
+                                "",
+                                "Usuario autenticado correctamente y datos actualizados",
+                                token,
+                                true,
+                                usuario.isActivo(),
+                                roles);
         }
 }

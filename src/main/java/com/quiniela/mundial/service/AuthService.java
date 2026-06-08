@@ -10,4 +10,6 @@ public interface AuthService {
     AuthResponseDTO login(AuthRequestDTO authRequest);
 
     ResponseDTO registrarUsuario(Map<String, String> request);
+
+    AuthResponseDTO obtenerUsuarioPorToken(String token);
 }

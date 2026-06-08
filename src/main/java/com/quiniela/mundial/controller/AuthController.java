@@ -45,4 +45,14 @@ public class AuthController {
                     null));
         }
     }
+
+    @GetMapping("/me")
+    public ResponseEntity<AuthResponseDTO> obtenerUsuarioActual(@RequestHeader("Authorization") String token) {
+        // Quitamos la palabra "Bearer " del token si viene incluida
+        String jwtToken = token.startsWith("Bearer ") ? token.substring(7) : token;
+
+        // Le pedimos al servicio que busque al usuario dueño de ese token y devuelva
+        // sus datos frescos
+        return ResponseEntity.ok(authService.obtenerUsuarioPorToken(jwtToken));
+    }
 }
