@@ -1,5 +1,6 @@
 package com.quiniela.mundial.service;
 
+import com.quiniela.mundial.dto.DetallePrediccionesPartidosDTO;
 import com.quiniela.mundial.dto.PrediccionRequestDTO;
 import com.quiniela.mundial.model.Partido;
 import com.quiniela.mundial.model.Prediccion;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class PrediccionServiceImpl implements PrediccionService {
@@ -54,5 +56,18 @@ public class PrediccionServiceImpl implements PrediccionService {
     @Override
     public List<Prediccion> obtenerPrediccionesPorUsuario(Long usuarioId) {
         return prediccionRepository.findByUsuarioId(usuarioId);
+    }
+
+    @Override
+    public List<DetallePrediccionesPartidosDTO> obtenerPronosticosPorPartido(Long partidoId) {
+        List<Prediccion> predicciones = prediccionRepository.findByPartidoId(partidoId);
+
+        return predicciones.stream()
+                .map(p -> new DetallePrediccionesPartidosDTO(
+                        p.getUsuario().getUsername(),
+                        p.getGolesLocalPred(),
+                        p.getGolesVisitantePred(),
+                        p.getPuntosGanados() != null ? p.getPuntosGanados() : 0))
+                .collect(Collectors.toList());
     }
 }

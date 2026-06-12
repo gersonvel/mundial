@@ -1,6 +1,7 @@
 package com.quiniela.mundial.controller;
 
 import com.quiniela.mundial.dto.ResponseDTO;
+import com.quiniela.mundial.dto.DetallePrediccionesPartidosDTO;
 import com.quiniela.mundial.dto.PrediccionRequestDTO;
 import com.quiniela.mundial.model.Prediccion;
 import com.quiniela.mundial.model.Usuario;
@@ -72,5 +73,11 @@ public class PrediccionController {
                     e.getMessage(),
                     null));
         }
+    }
+
+    @GetMapping("/partidos/{partidoId}/comunidad")
+    public ResponseEntity<List<DetallePrediccionesPartidosDTO>> obtenerPronosticosComunidad(
+            @PathVariable Long partidoId) {
+        return ResponseEntity.ok(prediccionService.obtenerPronosticosPorPartido(partidoId));
     }
 }
